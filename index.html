@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Shabdotsav 2.0 - Voices Between Dreams and Silence</title>
     <meta name="description"
-        content="Welcome to Shabdotsav 2.0, a premier exhibition and celebration of literature, cinema, theatre, journalism, dance, and visual arts. Explore our curated events catalog, galleries, and register today.">
+        content="Welcome to Shabdotsav 2.0, a premier exhibition and celebration of literature, cinema, theatre, journalism, dance, and visual arts. Explore our curated events catalog and register today.">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -210,11 +210,6 @@
             border-right: 1px solid rgba(99, 71, 77, 0.1);
         }
 
-        /* Lightbox Image Scale Interaction */
-        .lightbox-active img {
-            transform: scale(1);
-        }
-
         /* Input styling with floating labels */
         .agency-input {
             border: none;
@@ -261,8 +256,6 @@
                     href="#home">Home</a>
                 <a class="nav-link font-label-caps text-label-caps text-surface-variant/80 hover:text-primary-container transition-colors duration-300 pb-1"
                     href="#events">Events</a>
-                <a class="nav-link font-label-caps text-label-caps text-surface-variant/80 hover:text-primary-container transition-colors duration-300 pb-1"
-                    href="#gallery">Gallery</a>
                 <a class="nav-link font-label-caps text-label-caps text-surface-variant/80 hover:text-primary-container transition-colors duration-300 pb-1"
                     href="#about">About</a>
                 <a class="nav-link font-label-caps text-label-caps text-surface-variant/80 hover:text-primary-container transition-colors duration-300 pb-1"
@@ -687,264 +680,6 @@
             </div>
         </section>
 
-        <!-- SECTION: GALLERY -->
-        <section id="view-gallery"
-            class="view-section hidden pt-[80px] pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-            <header
-                class="py-16 md:py-24 text-center relative flex flex-col items-center border-b border-deep-charcoal/10 mb-12">
-                <div class="relative z-10 max-w-3xl mx-auto">
-                    <h1
-                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-[#11161B] mb-6 uppercase tracking-tight">
-                        The Exhibition</h1>
-                    <p class="font-body-lg text-body-lg text-[#11161B]/80 max-w-2xl mx-auto leading-relaxed">
-                        A curated collection of cinematic and artistic moments from Shabotsav 2.0. Explore the
-                        disciplines that define our cultural narrative.
-                    </p>
-                </div>
-            </header>
-
-            <!-- Categories Nav Filter -->
-            <div class="flex flex-wrap justify-center gap-4 mb-16">
-                <button onclick="filterGallery('ALL')" id="filter-ALL"
-                    class="gallery-filter-btn bg-[#0E151C] text-[#C2A675] font-label-caps text-label-caps px-6 py-2 rounded-full border border-[#C2A675] transition-all">ALL
-                    WORK</button>
-                <button onclick="filterGallery('THEATRE')" id="filter-THEATRE"
-                    class="gallery-filter-btn bg-transparent text-[#11161B] font-label-caps text-label-caps px-6 py-2 rounded-full border border-[#11161B] hover:bg-[#11161B] hover:text-[#F1EAD9] transition-all">THEATRE</button>
-                <button onclick="filterGallery('VISUAL-ARTS')" id="filter-VISUAL-ARTS"
-                    class="gallery-filter-btn bg-transparent text-[#11161B] font-label-caps text-label-caps px-6 py-2 rounded-full border border-[#11161B] hover:bg-[#11161B] hover:text-[#F1EAD9] transition-all">VISUAL
-                    ARTS</button>
-                <button onclick="filterGallery('LITERATURE')" id="filter-LITERATURE"
-                    class="gallery-filter-btn bg-transparent text-[#11161B] font-label-caps text-label-caps px-6 py-2 rounded-full border border-[#11161B] hover:bg-[#11161B] hover:text-[#F1EAD9] transition-all">LITERATURE</button>
-                <button onclick="filterGallery('MOVEMENT')" id="filter-MOVEMENT"
-                    class="gallery-filter-btn bg-transparent text-[#11161B] font-label-caps text-label-caps px-6 py-2 rounded-full border border-[#11161B] hover:bg-[#11161B] hover:text-[#F1EAD9] transition-all">MOVEMENT</button>
-            </div>
-
-            <!-- Bento Grid Gallery -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675]"
-                    data-category="THEATRE">
-                    <h3 class="font-headline-md text-headline-md mb-4">The Ceasefire Chamber</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675]"
-                    data-category="VISUAL-ARTS">
-                    <h3 class="font-headline-md text-headline-md mb-4">Ink & Lens</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675]"
-                    data-category="MOVEMENT">
-                    <h3 class="font-headline-md text-headline-md mb-4">Verse in Motion</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675]"
-                    data-category="VISUAL-ARTS">
-                    <h3 class="font-headline-md text-headline-md mb-4">Fragments</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675]"
-                    data-category="VISUAL-ARTS">
-                    <h3 class="font-headline-md text-headline-md mb-4">Frames Unspoken</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675]"
-                    data-category="THEATRE">
-                    <h3 class="font-headline-md text-headline-md mb-4">Echoes</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-                <div class="gallery-card border border-[#11161B]/20 p-8 flex flex-col items-center justify-center text-center bg-[#11161B]/5 rounded-sm min-h-[250px] transition-all hover:border-[#C2A675] md:col-span-2 lg:col-span-1"
-                    data-category="LITERATURE">
-                    <h3 class="font-headline-md text-headline-md mb-4">The Bard Battle</h3>
-                    <p class="font-label-caps text-label-caps text-[#11161B]/60">View Images</p>
-                    <p class="font-body-md text-body-md italic text-primary">To be added</p>
-                </div>
-            </div>
-
-            <!-- Previous Edition 14-Image Gallery Section -->
-            <section class="pt-16 border-t border-[#11161B]/10">
-                <h2
-                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-[#11161B] mb-12 uppercase tracking-tight text-center">
-                    Previous Edition</h2>
-
-                <!-- Images Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Image loops from 1 to 14 -->
-                    <div onclick="openLightbox(1)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im1.jpeg" alt="Previous Edition Moment 1"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(2)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im2.jpeg" alt="Previous Edition Moment 2"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 2</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(3)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im3.jpeg" alt="Previous Edition Moment 3"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(4)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im4.jpeg" alt="Previous Edition Moment 4"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(5)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im5.jpeg" alt="Previous Edition Moment 5"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(6)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im6.jpeg" alt="Previous Edition Moment 6"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 6</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(7)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im7.jpeg" alt="Previous Edition Moment 7"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 7</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(8)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im8.jpeg" alt="Previous Edition Moment 8"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 8</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(9)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im9.jpeg" alt="Previous Edition Moment 9"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(10)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im10.jpeg" alt="Previous Edition Moment 10"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 10</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(11)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im11.jpeg" alt="Previous Edition Moment 11"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 11</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(12)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im12.jpeg" alt="Previous Edition Moment 12"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 12</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(13)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im13.jpeg" alt="Previous Edition Moment 13"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 13</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div onclick="openLightbox(14)"
-                        class="gallery-item cursor-pointer overflow-hidden border border-on-surface/10 bg-surface-container relative group shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="images/im14.jpeg" alt="Previous Edition Moment 14"
-                            class="w-full h-full object-cover aspect-[4/3] transform transition-transform duration-500 group-hover:scale-105 filter grayscale hover:grayscale-0">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#11161B]/80 via-[#11161B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <div class="text-[#F1EAD9] flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                <span class="font-label-caps text-xs tracking-wider">Expand Moment 14</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
 
         <!-- SECTION: ABOUT -->
         <section id="view-about" class="view-section hidden pt-32 pb-section-gap">
@@ -1216,12 +951,22 @@
                             decision-making. Engage in high-stakes discourse and shape the narrative.
                         </p>
                     </div>
-                    <div
-                        class="h-[350px] w-full bg-[#11161B]/5 border border-charcoal/20 relative overflow-hidden mb-12 flex items-center justify-center rounded-sm">
-                        <div class="absolute inset-0 bg-gradient-to-br from-surface-variant to-[#e8dfd2] opacity-50"
-                            data-alt="A parliamentary chamber model"></div>
-                        <span class="material-symbols-outlined text-7xl text-charcoal/40">gavel</span>
+
+                    <!-- Event Image / Poster Container -->
+                    <div class="event-image-container relative w-full aspect-[16/10] overflow-hidden rounded-sm border border-charcoal easel-shadow bg-surface-container-low mb-8 group"
+                        data-event="ceasefire_chamber">
+                        <img src="images/ceasefire_chamber.jpg" alt="The Ceasefire Chamber"
+                            class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                            data-event="ceasefire_chamber">
+                        <div
+                            class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-charcoal/25 bg-[#eae1dd]/60">
+                            <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                            <p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                            <p class="font-body-md text-xs text-on-surface-variant mt-1">Image source: <code class="bg-charcoal/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/ceasefire_chamber.jpg</code></p>
+                            <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
+                        </div>
                     </div>
+
                     <div class="easel-card p-8 rounded-sm shadow-hard">
                         <h3 class="font-headline-md text-headline-md text-on-surface mb-4">Storykeepers</h3>
                         <ul class="space-y-2 font-body-lg text-body-lg text-on-surface-variant">
@@ -1235,66 +980,11 @@
                 <!-- Right Column Form -->
                 <div class="md:col-span-5 pl-0 md:pl-8">
                     <div class="sticky top-32">
-                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Secure Your Seat</h2>
-                        <form class="space-y-12">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="cf_name" name="name" placeholder="Full Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="cf_name">Participant Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="cf_class" name="class-section" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="cf_class">Class & Section</label>
-                            </div>
-                            <div class="relative">
-                                <label
-                                    class="font-label-caps text-label-caps text-on-surface-variant block mb-4">Preferred
-                                    Team Role</label>
-                                <div class="space-y-4">
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <div
-                                            class="w-5 h-5 border border-charcoal flex items-center justify-center group-hover:border-gold transition-colors relative">
-                                            <input checked
-                                                class="opacity-0 absolute cursor-pointer inset-0 w-full h-full peer"
-                                                name="role" type="radio" value="speaker">
-                                            <div class="w-3 h-3 bg-gold hidden peer-checked:block"></div>
-                                        </div>
-                                        <span class="font-body-lg text-body-lg text-on-surface">Speaker</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <div
-                                            class="w-5 h-5 border border-charcoal flex items-center justify-center group-hover:border-gold transition-colors relative">
-                                            <input class="opacity-0 absolute cursor-pointer inset-0 w-full h-full peer"
-                                                name="role" type="radio" value="researcher">
-                                            <div class="w-3 h-3 bg-gold hidden peer-checked:block"></div>
-                                        </div>
-                                        <span class="font-body-lg text-body-lg text-on-surface">Researcher</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <div
-                                            class="w-5 h-5 border border-charcoal flex items-center justify-center group-hover:border-gold transition-colors relative">
-                                            <input class="opacity-0 absolute cursor-pointer inset-0 w-full h-full peer"
-                                                name="role" type="radio" value="diplomat">
-                                            <div class="w-3 h-3 bg-gold hidden peer-checked:block"></div>
-                                        </div>
-                                        <span class="font-body-lg text-body-lg text-on-surface">Diplomat</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <button
-                                class="w-full bg-gold text-[#11161B] font-label-caps text-label-caps py-4 px-6 border-b-[3px] border-charcoal hover:border-b-0 hover:translate-y-[3px] transition-all duration-150 uppercase tracking-widest mt-8"
-                                type="submit">
-                                Confirm Registration
-                            </button>
-                        </form>
+                        <div class="easel-card p-8 md:p-12 border border-[#11161B] shadow-hard rounded-sm bg-[#fbf2ee] text-center">
+                            <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                            <h2 class="font-headline-md text-headline-md text-on-surface mb-4">{Google Forms To Be Added}</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Online registration form will be embedded here shortly.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1320,6 +1010,22 @@
                             platform to frame the narrative.
                         </p>
                     </div>
+
+                    <!-- Event Image / Poster Container -->
+                    <div class="event-image-container relative w-full aspect-[16/10] overflow-hidden rounded-sm border border-brand-charcoal easel-shadow bg-surface-container-low group"
+                        data-event="ink_lens">
+                        <img src="images/ink_lens.jpg" alt="Ink & Lens"
+                            class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                            data-event="ink_lens">
+                        <div
+                            class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-brand-charcoal/25 bg-[#eae1dd]/60">
+                            <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                            <p class="font-label-caps text-label-caps text-brand-charcoal uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                            <p class="font-body-md text-xs text-brand-charcoal/70 mt-1">Image source: <code class="bg-[#11161B]/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/ink_lens.jpg</code></p>
+                            <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
+                        </div>
+                    </div>
+
                     <div
                         class="border border-brand-charcoal/10 bg-surface-container-highest p-8 relative overflow-hidden group hover:bg-[#C2A675]/5 transition-colors duration-500 rounded-sm">
                         <h3
@@ -1336,58 +1042,16 @@
                                     class="font-bold">Parth</span> <span class="text-brand-charcoal/60">9B</span></li>
                         </ul>
                     </div>
-                    <div
-                        class="relative w-full aspect-[4/3] border border-brand-charcoal/20 rounded-sm overflow-hidden bg-[#eae1dd]">
-                        <img alt="Camera lens focusing"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida/AP1WRLuBHeXYOGctRjM9aw7jTmrFC5yunamWuYKkCVzy69EE2-5wGe7AmNcj6TDmIhZePIW2tPkcCGYBM-KZVoxgh5MmlCSlQXoVonNqqjupL1DxTcQppm8v_T9ft9iFlZeLgaylVyZ3zFekIHL_nSIkuoepLHesAwt3nueiBfdBZVY5Gwdl-wSw2zm1sIXkm1A81Ong-zh8cRTeyg94BChlnHy1GrhbVCnZN3EsfYBntKI1zcZpjrYrPhRwwBc">
-                    </div>
+
                 </div>
                 <div class="md:col-span-6 relative">
                     <div class="hidden md:block absolute -left-6 lg:-left-12 top-0 w-px h-full bg-brand-charcoal/10">
                     </div>
                     <div
-                        class="bg-[#eae1dd] border border-brand-charcoal/20 p-8 lg:p-12 shadow-[4px_4px_0px_0px_#C2A675] rounded-sm">
-                        <h2
-                            class="font-headline-lg text-headline-lg text-brand-charcoal mb-8 border-b border-brand-charcoal/10 pb-4">
-                            Register Core</h2>
-                        <form class="space-y-8">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="il_name" name="name" placeholder="Full Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="il_name">Participant Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="il_class" name="class_section" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="il_class">Class & Section</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="il_portfolio" name="portfolio" placeholder="Portfolio Link" type="url">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="il_portfolio">Portfolio Link (Optional)</label>
-                                <p class="mt-2 text-sm text-brand-charcoal/60">Share a link to your previous photography
-                                    or writing work.</p>
-                            </div>
-                            <div class="pt-8">
-                                <button
-                                    class="w-full bg-[#C2A675] text-[#11161B] font-label-caps text-label-caps py-4 px-8 uppercase tracking-widest border-b-2 border-brand-charcoal hover:translate-y-[2px] hover:border-b-0 transition-all flex items-center justify-center gap-3"
-                                    type="submit">
-                                    <span>Submit Registration</span>
-                                    <span class="material-symbols-outlined">arrow_forward</span>
-                                </button>
-                            </div>
-                        </form>
+                        class="bg-[#eae1dd] border border-brand-charcoal/20 p-8 lg:p-12 shadow-[4px_4px_0px_0px_#C2A675] rounded-sm text-center">
+                        <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                        <h2 class="font-headline-md text-headline-md text-brand-charcoal mb-4">{Google Forms To Be Added}</h2>
+                        <p class="font-body-md text-body-md text-brand-charcoal/70">Online registration form will be embedded here shortly.</p>
                     </div>
                 </div>
             </div>
@@ -1397,7 +1061,7 @@
         <section id="view-register_verse_in_motion"
             class="view-section hidden pt-[120px] pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-16">
-                <div class="lg:col-span-7 flex flex-col justify-end">
+                <div class="lg:col-span-12 flex flex-col justify-end">
                     <a class="inline-flex items-center text-gold font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity mb-4"
                         href="#events">
                         <span class="material-symbols-outlined mr-2">arrow_back</span>
@@ -1414,13 +1078,8 @@
                     <p
                         class="font-body-lg text-body-lg text-on-surface-variant max-w-xl border-l-2 border-on-surface/10 pl-6 py-2">
                         Transform poetry into movement through dance, narration, expression, and performance. An
-                        immersive gallery of human expression.
+                        immersive celebration of human expression.
                     </p>
-                </div>
-                <div
-                    class="lg:col-span-5 relative h-[300px] lg:h-[400px] w-full border border-on-surface/10 bg-surface-container-low overflow-hidden rounded-sm bg-[#eae1dd]">
-                    <img alt="Contemporary dancer mid-motion" class="w-full h-full object-cover grayscale"
-                        src="https://lh3.googleusercontent.com/aida/AP1WRLuXhAHMYQsJDZoQr3j9R1wKPoHvwqDE9mbEJS8lHwfDIQo5w9MjPTIiO7ChFdrHvQ7aHZ-JRhNMgXvqLMmPdP_t5ggRAHZ8wsdPb_ceZbuUuL7ivB24SpWQ0wMSByuf7d64pEhItCq5cPkli6r1wCOTf_Vihegb7UzQGh0T8VZfTPstnxdr0M2t2NDs960Wo2_jq1iBkh9SQ74LGFfofqWwhDNpYkwBCGi74GudVfLdWtdp0DZeE_aAJGp2">
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
@@ -1464,50 +1123,26 @@
                         </p>
                     </div>
                 </div>
-                <div class="lg:col-span-8">
-                    <div class="border border-on-surface/10 bg-[#eae1dd] p-8 md:p-12 lg:p-16 rounded-sm shadow-hard">
-                        <div class="mb-12">
-                            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Participant Details</h2>
-                            <p class="font-body-md text-body-md text-on-surface-variant">Please provide your information
-                                to secure your spot on the stage.</p>
+                <div class="lg:col-span-8 flex flex-col gap-8">
+                    <!-- Event Image / Poster Container -->
+                    <div class="event-image-container relative w-full aspect-[16/9] overflow-hidden rounded-sm border border-on-surface/10 easel-shadow bg-surface-container-low group"
+                        data-event="verse_in_motion">
+                        <img src="images/verse_in_motion.jpg" alt="Verse in Motion"
+                            class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                            data-event="verse_in_motion">
+                        <div
+                            class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-on-surface/20 bg-[#eae1dd]/60">
+                            <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                            <p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                            <p class="font-body-md text-xs text-on-surface-variant mt-1">Image source: <code class="bg-[#11161B]/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/verse_in_motion.jpg</code></p>
+                            <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
                         </div>
-                        <form class="space-y-12">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="vm_name" name="fullName" placeholder="Full Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="vm_name">Full Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="vm_class" name="classSection" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="vm_class">Class & Section</label>
-                            </div>
-                            <div class="relative group pt-4">
-                                <label
-                                    class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-2"
-                                    for="vm_poem">Poem Choice / Title</label>
-                                <textarea
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-surface/20 focus:border-on-surface focus:ring-0 px-0 py-3 font-body-lg text-body-lg text-on-surface placeholder-on-surface/30 transition-colors duration-300 resize-none"
-                                    id="vm_poem" name="poemChoice"
-                                    placeholder="Title of the piece you will be performing" required
-                                    rows="2"></textarea>
-                            </div>
-                            <div class="pt-8">
-                                <button
-                                    class="inline-flex items-center justify-center gap-3 bg-primary-container text-[#11161B] font-label-caps text-label-caps uppercase tracking-widest px-10 py-5 w-full md:w-auto border-b-[3px] border-[#11161B] hover:translate-y-[1px] hover:border-b-[2px] hover:bg-[#b09364] transition-all duration-200"
-                                    type="submit">
-                                    Confirm Registration
-                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-                                </button>
-                            </div>
-                        </form>
+                    </div>
+
+                    <div class="border border-on-surface/10 bg-[#eae1dd] p-8 md:p-12 lg:p-16 rounded-sm shadow-hard text-center">
+                        <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">{Google Forms To Be Added}</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Online registration form will be embedded here shortly.</p>
                     </div>
                 </div>
             </div>
@@ -1527,9 +1162,25 @@
                         class="inline-block bg-[#63474D] text-[#F1EAD9] px-3 py-1 font-label-caps text-label-caps uppercase w-max rounded-sm">
                         Installation Art</div>
                     <h1 class="font-display-lg text-on-surface mb-6">Fragments</h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">
                         Create meaningful art installations that communicate ideas, emotions, and perspectives.
                     </p>
+
+                    <!-- Event Image / Poster Container -->
+                    <div class="event-image-container relative w-full aspect-[16/10] overflow-hidden rounded-sm border border-charcoal easel-shadow bg-surface-container-low group"
+                        data-event="fragments">
+                        <img src="images/fragments.jpg" alt="Fragments"
+                            class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                            data-event="fragments">
+                        <div
+                            class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-charcoal/25 bg-[#eae1dd]/60">
+                            <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                            <p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                            <p class="font-body-md text-xs text-on-surface-variant mt-1">Image source: <code class="bg-[#11161B]/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/fragments.jpg</code></p>
+                            <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
+                        </div>
+                    </div>
+
                     <div class="easel-card easel-shadow p-6 rounded-sm mb-8 flex flex-col gap-4">
                         <h3
                             class="font-headline-md text-headline-md text-on-surface border-b border-on-surface/10 pb-4">
@@ -1544,59 +1195,20 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="relative h-64 md:h-[300px] w-full border border-on-surface rounded-sm overflow-hidden bg-[#eae1dd]">
-                        <img class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida/AP1WRLvJ2dHVY4RtVRfI1KFnq1xPG-61CvNqavYe8EFoohAqzxmP932CIiu12bIuxCr1bGbqW78Et0THmo5PwOWkiYmwmz17spo_WMOURd0zxcX4SpoCbzZb_W4aEBuGZlCObXfBamCNF0dENHzIZg4FHtt51VWFxrVbBqOAgOQ4Z0Zq9VuniPLeyqKPvfxL0QoUETFFrI20rud6LM8btI0i08VgUIuL_NDxNYplrzWoWZq0Zoq1zIqh9wOHcw_I">
-                    </div>
+
                 </div>
                 <div class="hidden md:block md:col-span-1 flex justify-center">
                     <div class="w-[1px] h-full bg-on-surface opacity-10"></div>
                 </div>
                 <div class="md:col-span-6 flex flex-col justify-center">
                     <div
-                        class="bg-surface-container-highest p-8 md:p-12 border border-[#11161B] rounded-sm relative shadow-hard">
+                        class="bg-surface-container-highest p-8 md:p-12 border border-[#11161B] rounded-sm relative shadow-hard text-center">
                         <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary-container"></div>
                         <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-container">
                         </div>
-                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Register Now</h2>
-                        <form class="flex flex-col gap-8">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="fr_name" name="fullName" placeholder="Full Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="fr_name">Full Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="fr_class" name="classSection" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="fr_class">Class / Section</label>
-                            </div>
-                            <div class="relative group pt-4">
-                                <label
-                                    class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-2"
-                                    for="fr_concept">Concept Description</label>
-                                <textarea
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-surface/20 focus:border-on-surface focus:ring-0 px-0 py-3 font-body-lg text-body-lg text-on-surface placeholder-on-surface/30 transition-colors duration-300 resize-none"
-                                    id="fr_concept" name="concept"
-                                    placeholder="Describe the central idea your installation aims to convey..." required
-                                    rows="3"></textarea>
-                            </div>
-                            <div class="pt-4">
-                                <button
-                                    class="primary-btn bg-gold text-[#11161B] font-label-caps text-label-caps py-4 px-6 border-b-[3px] border-charcoal hover:border-b-0 hover:translate-y-[3px] transition-all duration-150 uppercase tracking-widest w-full flex items-center justify-center gap-2"
-                                    type="submit">
-                                    <span>Submit Registration</span>
-                                    <span class="material-symbols-outlined">arrow_forward</span>
-                                </button>
-                            </div>
-                        </form>
+                        <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">{Google Forms To Be Added}</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Online registration form will be embedded here shortly.</p>
                     </div>
                 </div>
             </div>
@@ -1623,6 +1235,22 @@
                             This is a platform for visual storytellers to capture the essence of unspoken truths without
                             relying on dialogue.
                         </p>
+
+                        <!-- Event Image / Poster Container -->
+                        <div class="event-image-container relative w-full aspect-[16/10] overflow-hidden rounded-sm border border-charcoal easel-shadow bg-surface-container-low mb-8 group"
+                            data-event="frames_unspoken">
+                            <img src="images/frames_unspoken.jpg" alt="Frames Unspoken"
+                                class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                                data-event="frames_unspoken">
+                            <div
+                                class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-charcoal/25 bg-[#eae1dd]/60">
+                                <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                                <p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                                <p class="font-body-md text-xs text-on-surface-variant mt-1">Image source: <code class="bg-[#11161B]/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/frames_unspoken.jpg</code></p>
+                                <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
+                            </div>
+                        </div>
+
                         <div class="border-t border-outline/20 pt-8 mt-8">
                             <h3
                                 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-4">
@@ -1639,52 +1267,10 @@
                 <div class="lg:col-span-7 relative">
                     <div class="hidden lg:block absolute -left-12 top-0 bottom-0 w-px bg-on-surface opacity-10"></div>
                     <div
-                        class="easel-card p-8 md:p-12 relative overflow-hidden group shadow-hard rounded-sm border-[#11161B] bg-[#fbf2ee]">
-                        <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-bl-full transition-transform duration-700 group-hover:scale-150">
-                        </div>
-                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8 relative z-10">Secure Your
-                            Spot</h2>
-                        <form class="flex flex-col gap-10 relative z-10">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="fu_title" name="film_title" placeholder="Film Title" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="fu_title">Film Title / Working Title</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="fu_lead" name="lead_producer" placeholder="Lead Producer / Director" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="fu_lead">Lead Producer / Director Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="fu_class" name="class_section" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="fu_class">Class & Section</label>
-                            </div>
-                            <div class="pt-6 mt-4 flex items-center justify-between border-t border-[#11161B]/10">
-                                <p class="font-body-md text-body-md text-on-surface-variant text-sm max-w-[60%]">
-                                    By registering, you agree to the submission guidelines and deadlines provided by the
-                                    Storykeepers.
-                                </p>
-                                <button
-                                    class="agency-button bg-primary-container text-[#11161B] font-label-caps text-label-caps px-8 py-4 border-b-2 border-[#11161B] hover:translate-y-[2px] hover:border-b-0 transition-all flex items-center gap-2"
-                                    type="submit">
-                                    Register
-                                    <span class="material-symbols-outlined">arrow_forward</span>
-                                </button>
-                            </div>
-                        </form>
+                        class="easel-card p-8 md:p-12 relative overflow-hidden group shadow-hard rounded-sm border-[#11161B] bg-[#fbf2ee] text-center">
+                        <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">{Google Forms To Be Added}</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Online registration form will be embedded here shortly.</p>
                     </div>
                 </div>
             </div>
@@ -1705,15 +1291,25 @@
                             <span class="font-label-caps text-label-caps uppercase">DRAMA & THEATER</span>
                         </div>
                         <h1 class="font-display-lg text-on-surface mb-6">Echoes</h1>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Bring literature to life through
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Bring literature to life through
                             theatrical performances inspired by imagination, emotions, and timeless stories.</p>
                     </div>
-                    <div
-                        class="w-full h-64 md:h-80 bg-[#eae1dd] relative overflow-hidden rounded-sm border border-[#11161B]/10">
-                        <img alt="Theatrical stage setting"
-                            class="object-cover w-full h-full opacity-90 mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-300"
-                            src="https://lh3.googleusercontent.com/aida/AP1WRLvk_FQnsVAuB_APq_8j9waP-2NEl6yF5vVpLBJAZqUdQDFTN41zpiOC2tuAWVn38WlKoWqrDLbtEjWayg7_0aPq9AKH6Nmo9zI5-bc3t6xYef_15d6bm5ycQ5Qk2cqrygFEFrz1oVrblQVDGJJ90BfqcUdmihy18dsywgG0P2eJFT9OUpJPDkRfDw5A7g7w6n92UitFxzfVRrzN8vhnHp65jxTypL4_34Mo-JMmz3qOJiM_BlepRaubzh1Z">
+
+                    <!-- Event Image / Poster Container -->
+                    <div class="event-image-container relative w-full aspect-[16/10] overflow-hidden rounded-sm border border-charcoal easel-shadow bg-surface-container-low group"
+                        data-event="echoes">
+                        <img src="images/echoes.jpg" alt="Echoes"
+                            class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                            data-event="echoes">
+                        <div
+                            class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-charcoal/25 bg-[#eae1dd]/60">
+                            <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                            <p class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                            <p class="font-body-md text-xs text-on-surface-variant mt-1">Image source: <code class="bg-[#11161B]/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/echoes.jpg</code></p>
+                            <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
+                        </div>
                     </div>
+
                     <div class="bg-surface-container border border-on-surface-variant/10 p-6 md:p-8 rounded-sm">
                         <h3 class="font-headline-md text-headline-md mb-6">Storykeepers</h3>
                         <ul class="space-y-4 font-body-md text-body-md">
@@ -1730,48 +1326,10 @@
                 </div>
                 <div class="md:col-span-7">
                     <div
-                        class="bg-surface-container-lowest border border-on-surface-variant/10 p-6 md:p-12 relative shadow-hard rounded-sm bg-[#fbf2ee]">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none">
-                        </div>
-                        <div class="mb-10">
-                            <h2 class="font-headline-lg text-headline-lg mb-2">Register Your Team</h2>
-                            <p class="font-body-md text-body-md text-on-surface-variant">Please fill out the details
-                                below to secure your spot in the Echoes performance.</p>
-                        </div>
-                        <form class="space-y-8">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="ec_team" name="team_name" placeholder="Team Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="ec_team">Team Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="ec_lead" name="lead_member" placeholder="Lead Member Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="ec_lead">Lead Member Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="ec_class" name="class_section" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="ec_class">Class & Section</label>
-                            </div>
-                            <div class="pt-8">
-                                <button
-                                    class="w-full md:w-auto bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase px-12 py-4 border-b-[2px] border-on-surface hover:bg-inverse-primary hover:border-b-4 hover:-translate-y-[2px] transition-all duration-200"
-                                    type="submit">
-                                    Submit Registration
-                                </button>
-                            </div>
-                        </form>
+                        class="bg-surface-container-lowest border border-on-surface-variant/10 p-6 md:p-12 relative shadow-hard rounded-sm bg-[#fbf2ee] text-center">
+                        <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">{Google Forms To Be Added}</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Online registration form will be embedded here shortly.</p>
                     </div>
                 </div>
             </div>
@@ -1799,10 +1357,26 @@
                         <span
                             class="absolute -bottom-2 left-0 w-1/3 h-[2px] bg-primary-container transition-all duration-500 group-hover:w-full"></span>
                     </h1>
-                    <p class="font-body-lg text-body-lg text-on-background/80 mb-12 max-w-xl">
+                    <p class="font-body-lg text-body-lg text-on-background/80 mb-8 max-w-xl">
                         Put your literary knowledge to the test in an exciting quiz competition celebrating authors,
                         poetry, and language. An arena designed for the sharpest minds to duel with words and wit.
                     </p>
+
+                    <!-- Event Image / Poster Container -->
+                    <div class="event-image-container relative w-full aspect-[16/10] overflow-hidden rounded-sm border border-charcoal easel-shadow bg-surface-container-low mb-8 group"
+                        data-event="bard_battle">
+                        <img src="images/bard_battle.jpg" alt="The Bard Battle"
+                            class="event-img w-full h-full object-cover hidden transition-transform duration-500 group-hover:scale-105"
+                            data-event="bard_battle">
+                        <div
+                            class="event-placeholder w-full h-full flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-charcoal/25 bg-[#eae1dd]/60">
+                            <span class="material-symbols-outlined text-4xl text-gold mb-2 group-hover:scale-110 transition-transform">image</span>
+                            <p class="font-label-caps text-label-caps text-on-background uppercase tracking-wider font-bold">Event Artwork / Poster</p>
+                            <p class="font-body-md text-xs text-on-background/70 mt-1">Image source: <code class="bg-[#11161B]/10 px-1.5 py-0.5 rounded text-primary font-mono text-[11px]">images/bard_battle.jpg</code></p>
+                            <span class="inline-block mt-3 text-[10px] font-label-caps uppercase tracking-widest px-2.5 py-1 bg-[#11161B] text-gold rounded-full">Image to be added</span>
+                        </div>
+                    </div>
+
                     <div
                         class="flex items-center gap-4 p-6 border border-on-background/20 bg-surface-container-highest max-w-md rounded-sm shadow-hard">
                         <div
@@ -1822,45 +1396,10 @@
 
                 <div class="md:col-span-5">
                     <div
-                        class="border border-on-background bg-surface-container p-8 md:p-10 relative hover:bg-[#E4D8C4] transition-colors duration-500 rounded-sm shadow-hard">
-                        <div class="mb-8">
-                            <h2 class="font-headline-md text-headline-md text-on-background mb-2">Participant
-                                Registration</h2>
-                            <p class="font-body-md text-body-md text-on-background/70">Secure your place in the arena.
-                            </p>
-                        </div>
-                        <form class="space-y-8">
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="bb_name" name="fullName" placeholder="Full Name" required type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="bb_name">Full Name</label>
-                            </div>
-                            <div class="relative group">
-                                <input
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-3 text-on-background focus:ring-0 focus:border-primary-container transition-colors peer placeholder-transparent"
-                                    id="bb_class" name="classSection" placeholder="Class & Section" required
-                                    type="text">
-                                <label
-                                    class="absolute left-0 top-3 font-label-caps text-label-caps text-on-background/60 transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-primary peer-valid:-top-5 peer-valid:text-xs"
-                                    for="bb_class">Class / Section</label>
-                            </div>
-                            <div class="relative group pt-4">
-                                <label class="block font-label-caps text-label-caps text-on-background mb-2"
-                                    for="bb_interests">Literary Interests & Specializations</label>
-                                <textarea
-                                    class="w-full bg-transparent border-0 border-b-2 border-on-background/30 px-0 py-2 text-on-background focus:ring-0 focus:border-primary-container transition-colors resize-none"
-                                    id="bb_interests" name="interests"
-                                    placeholder="e.g., Victorian Poetry, Sci-Fi Epics..." required rows="3"></textarea>
-                            </div>
-                            <button
-                                class="w-full mt-6 bg-primary-container text-[#11161B] font-label-caps text-label-caps py-4 px-8 border-b-[3px] border-on-background hover:bg-inverse-primary hover:border-b hover:translate-y-[2px] transition-all duration-200 rounded-none uppercase tracking-widest flex items-center justify-center gap-2"
-                                type="submit">
-                                Enter the Battle <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
-                        </form>
+                        class="border border-on-background bg-surface-container p-8 md:p-10 relative hover:bg-[#E4D8C4] transition-colors duration-500 rounded-sm shadow-hard text-center">
+                        <span class="material-symbols-outlined text-5xl text-gold mb-4 block">description</span>
+                        <h2 class="font-headline-md text-headline-md text-on-background mb-4">{Google Forms To Be Added}</h2>
+                        <p class="font-body-md text-body-md text-on-background/70">Online registration form will be embedded here shortly.</p>
                     </div>
                 </div>
             </div>
@@ -1880,7 +1419,7 @@
                     institutional exhibitions.
                 </p>
                 <div class="font-body-md text-body-md text-surface-variant/60">
-                    © 2024 Shabdotsav 2.0. All Rights Reserved.
+                    © 2026 Shabdotsav 2.0. All Rights Reserved.
                 </div>
             </div>
 
@@ -1891,8 +1430,6 @@
                         href="#home">Home</a>
                     <a class="text-surface-variant/80 hover:text-primary-container transition-colors duration-200"
                         href="#events">Events</a>
-                    <a class="text-surface-variant/80 hover:text-primary-container transition-colors duration-200"
-                        href="#gallery">Gallery</a>
                 </div>
                 <div class="flex flex-col gap-4">
                     <span class="text-primary-container uppercase mb-2 tracking-wider">Information</span>
@@ -1925,8 +1462,6 @@
                 <a class="text-surface-variant/80 hover:text-primary-container py-2 border-b border-on-surface-variant/5"
                     href="#events" onclick="toggleMobileDrawer()">Events</a>
                 <a class="text-surface-variant/80 hover:text-primary-container py-2 border-b border-on-surface-variant/5"
-                    href="#gallery" onclick="toggleMobileDrawer()">Gallery</a>
-                <a class="text-surface-variant/80 hover:text-primary-container py-2 border-b border-on-surface-variant/5"
                     href="#about" onclick="toggleMobileDrawer()">About</a>
                 <a class="text-surface-variant/80 hover:text-primary-container py-2 border-b border-on-surface-variant/5"
                     href="#contact" onclick="toggleMobileDrawer()">Contact</a>
@@ -1937,34 +1472,6 @@
                     onclick="toggleMobileDrawer()">Register Now</a>
             </div>
         </div>
-    </div>
-
-    <!-- Gallery Lightbox Modal -->
-    <div id="lightbox-modal"
-        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 backdrop-blur-md bg-charcoal/95 transition-all duration-300"
-        onclick="if(event.target === this) closeLightbox();">
-        <button onclick="closeLightbox()"
-            class="absolute top-6 right-6 text-[#F1EAD9]/80 hover:text-gold transition-colors z-[110] focus:outline-none">
-            <span class="material-symbols-outlined text-4xl">close</span>
-        </button>
-
-        <!-- Image Card Container -->
-        <div class="relative max-w-4xl w-full flex flex-col items-center justify-center pointer-events-none">
-            <img id="lightbox-img" src="" alt="Lightbox Moment"
-                class="max-h-[80vh] max-w-full object-contain shadow-2xl border-4 border-charcoal/50 rounded-sm pointer-events-auto transform transition-transform duration-300">
-
-            <p id="lightbox-caption" class="text-[#F1EAD9] font-label-caps text-xs tracking-widest mt-4 uppercase"></p>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <button onclick="prevImage()"
-            class="absolute left-6 top-1/2 -translate-y-1/2 text-[#F1EAD9]/80 hover:text-gold transition-all duration-300 p-2 z-[110] focus:outline-none hover:scale-110 active:scale-95">
-            <span class="material-symbols-outlined text-5xl">arrow_back_ios</span>
-        </button>
-        <button onclick="nextImage()"
-            class="absolute right-6 top-1/2 -translate-y-1/2 text-[#F1EAD9]/80 hover:text-gold transition-all duration-300 p-2 z-[110] focus:outline-none hover:scale-110 active:scale-95">
-            <span class="material-symbols-outlined text-5xl">arrow_forward_ios</span>
-        </button>
     </div>
 
     <!-- Success Modal Overlay -->
@@ -2022,6 +1529,9 @@
             // Highlight current tab in navigation bar
             updateNavHighlights(hash);
 
+            // Trigger dynamic event image checking
+            initEventImages();
+
             // Scroll back to top
             window.scrollTo({ top: 0, behavior: 'instant' });
 
@@ -2046,10 +1556,59 @@
             });
         }
 
+        // DYNAMIC EVENT IMAGE RESOLVER AND LOADER
+        function initEventImages() {
+            const containers = document.querySelectorAll('.event-image-container');
+            const extensions = ['.jpg', '.png', '.jpeg', '.webp', '.svg'];
+
+            containers.forEach(container => {
+                const eventSlug = container.getAttribute('data-event');
+                if (!eventSlug) return;
+
+                const imgEl = container.querySelector('.event-img');
+                const placeholderEl = container.querySelector('.event-placeholder');
+                if (!imgEl || !placeholderEl) return;
+
+                // Candidate search locations:
+                // 1. images/[event_name].[ext]
+                // 2. images/[event_name]/poster.[ext]
+                // 3. images/[event_name]/image.[ext]
+                // 4. images/[event_name]/[event_name].[ext]
+                const candidatePaths = [];
+                extensions.forEach(ext => candidatePaths.push(`images/${eventSlug}${ext}`));
+                extensions.forEach(ext => candidatePaths.push(`images/${eventSlug}/poster${ext}`));
+                extensions.forEach(ext => candidatePaths.push(`images/${eventSlug}/image${ext}`));
+                extensions.forEach(ext => candidatePaths.push(`images/${eventSlug}/${eventSlug}${ext}`));
+
+                let resolved = false;
+
+                function testNext(index) {
+                    if (index >= candidatePaths.length || resolved) return;
+                    const testSrc = candidatePaths[index];
+                    const testImg = new Image();
+                    testImg.onload = function () {
+                        if (!resolved) {
+                            resolved = true;
+                            imgEl.src = testSrc;
+                            imgEl.classList.remove('hidden');
+                            placeholderEl.classList.add('hidden');
+                        }
+                    };
+                    testImg.onerror = function () {
+                        testNext(index + 1);
+                    };
+                    testImg.src = testSrc;
+                }
+
+                testNext(0);
+            });
+        }
+
         // Initialize Router listeners
         window.addEventListener('hashchange', router);
         window.addEventListener('DOMContentLoaded', () => {
             router();
+            initEventImages();
             setupFormInterceptors();
             setupFloatingLabelListeners();
         });
@@ -2085,82 +1644,6 @@
             }
         }
 
-        // PREVIOUS EDITION GALLERY LIGHTBOX
-        let currentImageIndex = 1;
-        const totalImages = 14;
-
-        function openLightbox(index) {
-            currentImageIndex = index;
-            const modal = document.getElementById('lightbox-modal');
-
-            updateLightboxImage();
-
-            modal.classList.remove('hidden');
-            modal.offsetHeight; // force reflow
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const modal = document.getElementById('lightbox-modal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
-        function prevImage() {
-            currentImageIndex--;
-            if (currentImageIndex < 1) currentImageIndex = totalImages;
-            updateLightboxImage();
-        }
-
-        function nextImage() {
-            currentImageIndex++;
-            if (currentImageIndex > totalImages) currentImageIndex = 1;
-            updateLightboxImage();
-        }
-
-        function updateLightboxImage() {
-            const img = document.getElementById('lightbox-img');
-            const caption = document.getElementById('lightbox-caption');
-            img.src = `images/im${currentImageIndex}.jpeg`;
-            caption.textContent = `Previous Edition - Image ${currentImageIndex} of ${totalImages}`;
-        }
-
-        // Listen for keyboard navigation in Lightbox
-        window.addEventListener('keydown', (e) => {
-            const modal = document.getElementById('lightbox-modal');
-            if (modal && !modal.classList.contains('hidden')) {
-                if (e.key === 'Escape') closeLightbox();
-                else if (e.key === 'ArrowLeft') prevImage();
-                else if (e.key === 'ArrowRight') nextImage();
-            }
-        });
-
-        // GALLERY CATAGORY FILTERS
-        function filterGallery(category) {
-            // Toggle filter button styling
-            const buttons = document.querySelectorAll('.gallery-filter-btn');
-            buttons.forEach(btn => {
-                if (btn.id === `filter-${category}`) {
-                    btn.classList.add('bg-[#0E151C]', 'text-[#C2A675]', 'border-[#C2A675]');
-                    btn.classList.remove('bg-transparent', 'text-[#11161B]', 'border-[#11161B]');
-                } else {
-                    btn.classList.remove('bg-[#0E151C]', 'text-[#C2A675]', 'border-[#C2A675]');
-                    btn.classList.add('bg-transparent', 'text-[#11161B]', 'border-[#11161B]');
-                }
-            });
-
-            // Filter bento items
-            const cards = document.querySelectorAll('.gallery-card');
-            cards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                if (category === 'ALL' || cardCategory === category) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        }
-
         // FORM SUBMISSION INTERCEPTORS
         function setupFormInterceptors() {
             const forms = document.querySelectorAll('form');
@@ -2168,11 +1651,14 @@
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
 
-                    // Show a submit loading state
+                    // Show a submit loading state if submit button exists
                     const submitBtn = form.querySelector('button[type="submit"]');
-                    const originalContent = submitBtn.innerHTML;
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = 'Registering...';
+                    let originalContent = '';
+                    if (submitBtn) {
+                        originalContent = submitBtn.innerHTML;
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = 'Registering...';
+                    }
                     form.classList.add('opacity-60');
 
                     // Simulate mock network response delay
@@ -2182,8 +1668,10 @@
                         const inputs = form.querySelectorAll('input, textarea');
                         inputs.forEach(input => input.removeAttribute('valid'));
 
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = originalContent;
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalContent;
+                        }
                         form.classList.remove('opacity-60');
 
                         showSuccessModal();
