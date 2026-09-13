@@ -247,15 +247,13 @@
             padding: 0;
         }
 
-        .hidden {
-            display: none !important;
-        }
-
+        /* View Section Routing State */
         .view-section {
+            display: none;
             width: 100%;
         }
 
-        #view-home {
+        .view-section.active {
             display: block;
         }
     </style>
@@ -296,7 +294,7 @@
     <main class="flex-grow">
 
         <!-- SECTION: HOME -->
-        <section id="view-home" class="view-section">
+        <section id="view-home" class="view-section active">
             <!-- Hero Section -->
             <div class="relative min-h-[85vh] flex items-center justify-center bg-[#11161B] pt-[80px] overflow-hidden" style="background-color: #11161B; min-height: 85vh;">
                 <div
@@ -1683,14 +1681,16 @@
             const hash = window.location.hash || '#home';
             const viewSectionId = 'view-' + hash.substring(1);
 
-            // Hide all views
+            // Toggle view sections
             const sections = document.querySelectorAll('.view-section');
             let found = false;
             sections.forEach(sec => {
                 if (sec.id === viewSectionId) {
+                    sec.classList.add('active');
                     sec.classList.remove('hidden');
                     found = true;
                 } else {
+                    sec.classList.remove('active');
                     sec.classList.add('hidden');
                 }
             });
@@ -1698,7 +1698,10 @@
             // Fallback to #home if view not found
             if (!found) {
                 const homeSec = document.getElementById('view-home');
-                if (homeSec) homeSec.classList.remove('hidden');
+                if (homeSec) {
+                    homeSec.classList.add('active');
+                    homeSec.classList.remove('hidden');
+                }
                 window.history.replaceState(null, null, '#home');
             }
 
