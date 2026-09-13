@@ -246,6 +246,18 @@
             margin: 0;
             padding: 0;
         }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .view-section {
+            width: 100%;
+        }
+
+        #view-home {
+            display: block;
+        }
     </style>
 </head>
 
@@ -253,7 +265,7 @@
     class="bg-surface text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
 
     <!-- Header Navigation Shared Component -->
-    <header class="bg-[#11161B] fixed top-0 w-full z-50 border-b border-on-surface-variant/10">
+    <header class="bg-[#11161B] fixed top-0 w-full z-50 border-b border-on-surface-variant/10" style="background-color: #11161B;">
         <div class="flex justify-between items-center px-gutter py-2 md:py-3 max-w-container-max mx-auto">
             <a href="#home" class="flex items-center"><img src="logo.png" alt="Shabdotsav 2.0"
                     class="h-24 md:h-32 w-auto object-contain transition-all duration-300 hover:scale-105"></a>
@@ -286,7 +298,7 @@
         <!-- SECTION: HOME -->
         <section id="view-home" class="view-section">
             <!-- Hero Section -->
-            <div class="relative min-h-[85vh] flex items-center justify-center bg-[#11161B] pt-[80px] overflow-hidden">
+            <div class="relative min-h-[85vh] flex items-center justify-center bg-[#11161B] pt-[80px] overflow-hidden" style="background-color: #11161B; min-height: 85vh;">
                 <div
                     class="absolute inset-0 bg-gradient-to-b from-[#11161B] via-[#11161B]/90 to-[#11161B] z-0 pointer-events-none">
                 </div>
@@ -779,4 +791,4 @@
                             <li class="flex items-center gap-3">
                                 <div class="w-1.5 h-1.5 bg-gold"></div>
                                 Architectural approach to stage design
-                            </
+               
